@@ -40,7 +40,7 @@ class Solution(object):
             return [newInterval]
        
         intervals.append(newInterval)
-        intervals.sort(key=operator.attrgetter(0, 1))
+        intervals.sort(key=operator.attrgetter('start', 'end'))
         results = []
         for item in intervals:
             # this step is important, because size change by merge every time
